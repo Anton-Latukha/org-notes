@@ -1,0 +1,81 @@
+$<num> - col
+@<num> - row
+
+C-c ? - get the info/address on the cell
+C-c } - visualize table structure
+C-c C-c - refresh/evaluate the sheet
+
+| Student  | Maths | Physics | Mean |
+|----------+-------+---------+------|
+| Bertrand |    13 |      09 |      |
+| Henri    |    15 |      14 |      |
+| Arnold   |    17 |      13 |      |
+
+* Formula
+:= - is cell formula
+=  - is row formula
+
+Example:
+  =vmean($2..$3)
+
+| Student  | Maths | Physics | Mean |
+|----------+-------+---------+------|
+| Bertrand |    13 |      09 |   11 |
+| Henri    |    15 |      14 | 14.5 |
+| Arnold   |    17 |      13 |   15 |
+#+TBLFM: $4=vmean($2..$3)
+
+To update the whole table - update the TBLFM.
+
+** Edit formula
+
+In a minibuffer
+
+At the cell - C-c =
+
+In a dedicated buffer
+
+At the cell C-c '
+
+** Calc formula
+
+=2+3*4*5/6*7^8-9
+| =2+3*4*5/6*7^8-9 |
+|       -6.9999983 |
+
+** Elisp formula
+
+Add it in the form
+$5='(substring (number-to-string $pi) (round $4) (1+ (round $4)));N
+If the mean of a student is 10, this formula returns the tenth decimal of Pi.
+#+CONSTANTS: pi=3.14159265358979323846
+| Student  | Maths | Physics | Mean | Pi |
+|----------+-------+---------+------+----|
+| Bertrand |    13 |      09 |   11 |  5 |
+| Henri    |    15 |      14 | 14.5 |  7 |
+| Arnold   |    17 |      13 |   15 |  9 |
+#+TBLFM: $4=vmean($2..$3)::$5='(substring (number-to-string $pi) (round $4) (1+ (round $4)));N
+
+, where:
+    (substring S A B): get a substring of string S between A and B
+    (number-to-string $pi): convert the constant "Pi" into a string
+    (round $4): get the rounded value of the value in column $4
+    ;N: consider the values of fields to be numeric values, not strings.
+
+** Formula debugging
+
+#+CONSTANTS: pi=3.14159265358979323846
+
+| Student  | Maths | Physics | Mean | Pi |
+|----------+-------+---------+------+----|
+| Bertrand |    13 |      09 |   11 |  5 |
+| Henri    |    15 |      14 | 14.5 |  7 |
+| Arnold   |    17 |      13 |   15 |  9 |
+#+TBLFM: $4=vmean($2..$3)::$5='(substring (number-to-string $pi) (round $4) (1+ (round $4)));N
+
+If you come back to this table but feel a bit lazy trying to understand what the Emacs Lisp function does,
+you might as well want to debug the formula and follow the computation step by step.
+
+C-c { - formula debugger
+
+Then refresh TBLFM.
