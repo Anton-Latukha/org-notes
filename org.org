@@ -1,3 +1,8 @@
+* Org
+Promote text -> heading, demote heading -> text
+#+begin_src elisp
+org-toogle-heading ;; C-c *
+#+end_src
 * Capture
 C-c c - enter capture mode
 C-c w - refile the entry to different file
