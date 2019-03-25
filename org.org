@@ -160,3 +160,8 @@ You can group column like this:
 | # |  2 |   4 |   8 |  16 |  1.4142 |     1.1892 |
 | # |  3 |   9 |  27 |  81 |         |     1.3161 |
 |---+----+-----+-----+-----+---------+------------|
+* Automatically show LaTeX formulas/expressions
+#+begin_src org
+#+STARTUP: latexpreview
+#+end_src
+
