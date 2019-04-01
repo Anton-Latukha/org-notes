@@ -165,3 +165,7 @@ You can group column like this:
 #+STARTUP: latexpreview
 #+end_src
 
+* Browse symbol dictionary of all special symbols available
+#+begin_src elisp
+(org-entities-help)
+#+end_src
