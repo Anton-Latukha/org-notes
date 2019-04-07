@@ -169,3 +169,7 @@ You can group column like this:
 #+begin_src elisp
 (org-entities-help)
 #+end_src
+* Org insert templates
+#+begin_example
+SPC i b
+#+end_example
