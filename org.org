@@ -7,6 +7,10 @@ org-toogle-heading ;; C-c *
 #+begin_src elisp
 org-edit-src-code
 #+end_src
+** Org Babel execute code block :org:babel:code:
+#+begin_quote
+C-c C-c
+#+end_quote
 * Capture
 C-c c - enter capture mode
 C-c w - refile the entry to different file
