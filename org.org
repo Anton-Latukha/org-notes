@@ -3,6 +3,10 @@ Promote text -> heading, demote heading -> text
 #+begin_src elisp
 org-toogle-heading ;; C-c *
 #+end_src
+** Org Babel code block edit code :org:babel:code:
+#+begin_src elisp
+org-edit-src-code
+#+end_src
 * Capture
 C-c c - enter capture mode
 C-c w - refile the entry to different file
