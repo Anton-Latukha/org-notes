@@ -105,7 +105,6 @@ C-c { - formula debugger
 Then refresh TBLFM.
 * Table
 ** Basic table creation
-
 | To create a table place pipe at the biginning of text           |
 | When you press TAB inside cell - the next cell would be created |
 
@@ -126,9 +125,7 @@ some, comma, separated, values
 | some | comma | separated | values |
 
 ** Editing table structure
-
 *** Moving rows/colums
-
 Move them aroung with M-<arrow keys>
 
 | A | B | C |
@@ -137,7 +134,6 @@ Move them aroung with M-<arrow keys>
 | 1 | 2 | 3 |
 
 *** Inserting rows/columns
-
 (Shift-Alt-<arrow keys)
 S-M-<arrow keys>
 
@@ -148,26 +144,32 @@ S-M-<arrow keys>
 
 *** Narrowing the visible part of a column
 
-C-c C-c
-
-| <10>       | <15>            |
+C-c TAB - narrowing/widening
+| <10>             | <15>                        |
 | A very wide cell | Another very very wide cell |
 
-To exit cell in searate window - C-c `
+To edit cell in searate window - C-c `
 
 *** Preparing tables for export
-
 **** Grouping columns
-
 You can group column like this:
 
 |   |  N | N^2 | N^3 | N^4 | sqrt(n) | sqrt[4](N) |
-|---+----+-----+-----+-----+---------+------------|
-| / | <> |   < |     |   > |       < |          > |
-| # |  1 |   1 |   1 |   1 |       1 |          1 |
-| # |  2 |   4 |   8 |  16 |  1.4142 |     1.1892 |
-| # |  3 |   9 |  27 |  81 |         |     1.3161 |
-|---+----+-----+-----+-----+---------+------------|
+|---+----+----+----+----+---------+------------|
+| / | <> |  < |    |  > |       < |          > |
+| # |  1 |  1 |  1 |  1 |       1 |          1 |
+| # |  2 |  4 |  8 | 16 |  1.4142 |     1.1892 |
+| # |  3 |  9 | 27 | 81 |         |     1.3161 |
+|---+----+----+----+----+---------+------------|
+** Name tables
+#+CAPTION: This is the caption for the next table (or link)
+#+NAME:   tab:basic-data
+| ... | ... |
+|-----+-----|
+|     |     |
+
+Refer to the object with [[tab:basic-data]]
+
 * Automatically show LaTeX formulas/expressions
 #+begin_src org
 #+startup: latexpreview
