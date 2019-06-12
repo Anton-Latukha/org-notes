@@ -183,3 +183,9 @@ Refer to the object with [[tab:basic-data]]
 #+begin_example
 SPC i b
 #+end_example
+* Heading, section alias link
+For same heading use several CUSTOM-IDs.
+#+begin_src text
+:CUSTOM_ID: cust-id
+And then [[#cust-id][link]]
+#+end_src
