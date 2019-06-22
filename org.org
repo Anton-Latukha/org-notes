@@ -209,10 +209,6 @@ And then [[#cust-id][link]]
 | Priority up        | +     |                                                            |
 | Priority down      | -     |                                                            |
 | Date prompt        | >     |                                                            |
-| Filter by tag      | \     |                                                            |
-| Filter by effort   | _     |                                                            |
-| Filter by regexp   | =     |                                                            |
-| Filter by category | <     | Shows only entries of selected category.                   |
 
 *** View
 | Name        | Key | Description                                                |
@@ -230,3 +226,11 @@ And then [[#cust-id][link]]
 | Diary entry  | i   |                         |
 |              |     |                         |
 |              |     |                         |
+
+*** Filter
+| Name               | Key | Description                              |
+|--------------------+-----+------------------------------------------|
+| Filter by category | <   | Shows only entries of selected category. |
+| Filter by tag      | \   |                                          |
+| Filter by effort   | _   |                                          |
+| Filter by regexp   | =   |                                          |
