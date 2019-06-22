@@ -191,20 +191,16 @@ And then [[#cust-id][link]]
 #+end_src
 * Agenda
 ** Agenda keys
-
 | Name               | Key   | Description                                                |
 |--------------------+-------+------------------------------------------------------------|
 | Mark               | m     | Mark for bulk action.                                      |
 | Umark              | u     | Umark for bulk action.                                     |
-| Moon               | M     | Show phases of the Moon.                                   |
-| Sun                | S     | Show phases of the Sun.                                    |
 | SHDT               | , d s | Shedule.                                                   |
 | DUET               | , d d | Deadline.                                                  |
 | Show entry         | E     | Display body text.                                         |
 | Clock report table | R     | Toggle clock table display.                                |
 | Goto               | TAB   | Open a entry in other buffer.                              |
 | Add note           | z     | Into the entry.                                            |
-| Holidays           | H     |                                                            |
 | Switch to          | RET   | Open in current buffer.                                    |
 | Priority up        | +     |                                                            |
 | Priority down      | -     |                                                            |
@@ -234,3 +230,10 @@ And then [[#cust-id][link]]
 | Filter by tag      | \   |                                          |
 | Filter by effort   | _   |                                          |
 | Filter by regexp   | =   |                                          |
+
+*** World state
+| Name               | Key | Description                              |
+|--------------------+-----+------------------------------------------|
+| Moon               | M     | Show phases of the Moon.                                   |
+| Sun                | S     | Show phases of the Sun.                                    |
+| Holidays           | H     |                                                            |
