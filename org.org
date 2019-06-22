@@ -207,11 +207,12 @@ And then [[#cust-id][link]]
 | Goto               | TAB   | Open a entry in other buffer. |
 
 *** View
-| Name        | Key | Description                                                |
-|-------------+-----+------------------------------------------------------------|
-| Follow mode | F   | The buffer splits in half and shows the sources of entries |
-| Log mode    | L   | Show done and clocked tasks.                               |
-| Time grid   | g d | Open/close time grid.                                      |
+| Name                 | Key   | Description                                                |
+|----------------------+-------+------------------------------------------------------------|
+| Follow mode          | F     | The buffer splits in half and shows the sources of entries |
+| Log mode             | L     | Show done and clocked tasks.                               |
+| Time grid            | g d   | Open/close time grid.                                      |
+| Agenda and all TODOs | , a n | Show agenda and all TODOs beneath                          |
 
 *** Unneeded
 | Name         | Key | Description             |
