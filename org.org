@@ -204,18 +204,25 @@ And then [[#cust-id][link]]
 | DUET               | , d d | Deadline.                                                  |
 | Show entry         | E     | Display body text.                                         |
 | Clock report table | R     | Toggle clock table display.                                |
-| Show tags          | T     | Show tags of the entry.                                    |
 | Goto               | TAB   | Open a entry in other buffer.                              |
 | Add note           | z     | Into the entry.                                            |
 | Holidays           | H     |                                                            |
 | Switch to          | RET   | Open in current buffer.                                    |
 | Priority up        | +     |                                                            |
 | Priority down      | -     |                                                            |
-| Toggle diary       | D     |                                                            |
-| Diary entry        | i     |                                                            |
 | Date prompt        | >     |                                                            |
 | Filter by tag      | \     |                                                            |
 | Filter by effort   | _     |                                                            |
 | Filter by regexp   | =     |                                                            |
-| Filter by category | <     | Shows only entries of selected category. |
+| Filter by category | <     | Shows only entries of selected category.                   |
+
+*** Unneeded
+| Name         | Key | Description             |
+|--------------+-----+-------------------------|
+| Show tags    | T   | Show tags of the entry. |
+| Toggle diary | D   |                         |
+| Diary entry  | i   |                         |
+|              |     |                         |
+|              |     |                         |
+
 
