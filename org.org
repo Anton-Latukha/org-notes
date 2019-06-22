@@ -191,20 +191,20 @@ And then [[#cust-id][link]]
 #+end_src
 * Agenda
 ** Agenda keys
-| Name               | Key   | Description                                                |
-|--------------------+-------+------------------------------------------------------------|
-| Mark               | m     | Mark for bulk action.                                      |
-| Umark              | u     | Umark for bulk action.                                     |
-| SHDT               | , d s | Shedule.                                                   |
-| DUET               | , d d | Deadline.                                                  |
-| Show entry         | E     | Display body text.                                         |
-| Clock report table | R     | Toggle clock table display.                                |
-| Goto               | TAB   | Open a entry in other buffer.                              |
-| Add note           | z     | Into the entry.                                            |
-| Switch to          | RET   | Open in current buffer.                                    |
-| Priority up        | +     |                                                            |
-| Priority down      | -     |                                                            |
-| Date prompt        | >     |                                                            |
+| Name               | Key   | Description                   |
+|--------------------+-------+-------------------------------|
+| Priority up        | +     |                               |
+| Priority down      | -     |                               |
+| Date prompt        | >     |                               |
+| SHDT               | , d s | Shedule.                      |
+| DUET               | , d d | Deadline.                     |
+| Mark               | m     | Mark for bulk action.         |
+| Umark              | u     | Umark for bulk action.        |
+| Add entry text     | z     |                               |
+| Show entry         | E     | Display entry text.           |
+| Clock report table | R     | Toggle clock table display.   |
+| Switch to          | RET   | Open in current buffer.       |
+| Goto               | TAB   | Open a entry in other buffer. |
 
 *** View
 | Name        | Key | Description                                                |
@@ -212,7 +212,6 @@ And then [[#cust-id][link]]
 | Follow mode | F   | The buffer splits in half and shows the sources of entries |
 | Log mode    | L   | Show done and clocked tasks.                               |
 | Time grid   | g d | Open/close time grid.                                      |
-|             |     |                                                            |
 
 *** Unneeded
 | Name         | Key | Description             |
@@ -220,8 +219,6 @@ And then [[#cust-id][link]]
 | Show tags    | T   | Show tags of the entry. |
 | Toggle diary | D   |                         |
 | Diary entry  | i   |                         |
-|              |     |                         |
-|              |     |                         |
 
 *** Filter
 | Name               | Key | Description                              |
@@ -232,8 +229,8 @@ And then [[#cust-id][link]]
 | Filter by regexp   | =   |                                          |
 
 *** World state
-| Name               | Key | Description                              |
-|--------------------+-----+------------------------------------------|
-| Moon               | M     | Show phases of the Moon.                                   |
-| Sun                | S     | Show phases of the Sun.                                    |
-| Holidays           | H     |                                                            |
+| Name     | Key | Description              |
+|----------+-----+--------------------------|
+| Moon     | M   | Show phases of the Moon. |
+| Sun      | S   | Show phases of the Sun.  |
+| Holidays | H   | Major holidays.          |
