@@ -235,3 +235,37 @@ And then [[#cust-id][link]]
 | Moon     | M   | Show phases of the Moon. |
 | Sun      | S   | Show phases of the Sun.  |
 | Holidays | H   | Major holidays.          |
+* Org-drill
+
+** Converting Org-drill to Anki
+org-drill "items" is richer and freeform than the Anki format. You would basically need to write a bespoke "export" function for every org-drill card type.
+
+This is a function that exports all "simple" or "twosided" cards to a new buffer in CSV format. This might help. Or give you ideas for how to write your own function.
+
+#+begin_src lisp
+(defun org-drill-to-csv ()
+  "Find every 'simple' or 'twosided' org-drill item in the current scope. Create a new buffer,
+where we write the contents of the first 2 subheadings (sides) of each such item in CSV
+format. Switch to the new buffer when we finish."
+  (interactive)
+  (let ((buf (generate-new-buffer "*org-drill output*"))
+        (csv
+         (with-output-to-string
+           (org-map-drill-entries
+            (lambda ()
+              (when (and (org-drill-entry-p)
+                         (member (org-entry-get (point) "DRILL_CARD_TYPE" t)
+                                 '("simple" "twosided")))
+                (let ((bodies nil)
+                      (lvl (org-current-level)))
+                  (org-map-entries
+                   (lambda ()
+                     (when (> (org-current-level) lvl)
+                       (push (org-drill-get-entry-text) bodies)))
+                   nil 'tree)
+                  (setq bodies (reverse bodies))
+                  (princ (format "%S,%S\n" (first bodies) (second bodies))))))))))
+    (with-current-buffer buf
+      (insert csv)
+      (display-buffer (current-buffer)))))
+#+end_src
