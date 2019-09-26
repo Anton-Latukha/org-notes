@@ -170,6 +170,9 @@ You can group column like this:
 
 Refer to the object with [[tab:basic-data]]
 
+** Sort table
+
+=C-c ^= & choose sorting.
 * Automatically show LaTeX formulas/expressions
 #+begin_src org
 #+startup: latexpreview
