@@ -194,20 +194,22 @@ And then [[#cust-id][link]]
 #+end_src
 * Agenda
 ** Agenda keys
-| Name               | Key   | Description                   |
-|--------------------+-------+-------------------------------|
-| Priority up        | +     |                               |
-| Priority down      | -     |                               |
-| Date prompt        | >     |                               |
-| SHDT               | , d s | Shedule.                      |
-| DUET               | , d d | Deadline.                     |
-| Mark               | m     | Mark for bulk action.         |
-| Umark              | u     | Umark for bulk action.        |
-| Add entry text     | z     |                               |
-| Show entry         | E     | Display entry text.           |
-| Clock report table | R     | Toggle clock table display.   |
-| Switch to          | RET   | Open in current buffer.       |
-| Goto               | TAB   | Open a entry in other buffer. |
+| Name                      | Key      | Description                   |
+|---------------------------+----------+-------------------------------|
+| Priority up               | +        |                               |
+| Priority down             | -        |                               |
+| Date prompt               | >        |                               |
+| SHDT                      | , d s    | Shedule.                      |
+| DUET                      | , d d    | Deadline.                     |
+| Mark                      | m        | Mark for bulk action.         |
+| Umark                     | u        | Umark for bulk action.        |
+| Add entry text            | z        |                               |
+| Show entry                | E        | Display entry text.           |
+| Clock report table        | R        | Toggle clock table display.   |
+| Switch to                 | RET      | Open in current buffer.       |
+| Goto                      | TAB      | Open a entry in other buffer. |
+| Move to today/next day    | Shift+-> | Open a entry in other buffer. |
+| Move to preious day/today | Shift+<- | Open a entry in other buffer. |
 
 *** View
 | Name                 | Key   | Description                                                |
